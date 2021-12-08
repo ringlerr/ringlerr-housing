@@ -52,9 +52,9 @@ afterEvaluate {
                 //from components.release
 
                 // You can then customize attributes of the publication as shown below.
-                groupId = 'com.github.ringlerr'
+                groupId = 'com.ringlerr.callplus'
                 artifactId = 'ringlerr-housing'
-                version = '1.0.0'
+                version = '1.0.1'
             }
         }
     }
