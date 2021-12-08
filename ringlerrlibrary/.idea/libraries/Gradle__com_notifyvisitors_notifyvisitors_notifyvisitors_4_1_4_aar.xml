@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.notifyvisitors.notifyvisitors:notifyvisitors:4.1.4@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/notifyvisitors-4.1.4.aar/83c8efb88a9a3317f973de130f0dc341/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/notifyvisitors-4.1.4.aar/83c8efb88a9a3317f973de130f0dc341/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/notifyvisitors-4.1.4.aar/83c8efb88a9a3317f973de130f0dc341/jars/libs/gcm.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/notifyvisitors-4.1.4.aar/83c8efb88a9a3317f973de130f0dc341/jars/libs/notifyvisitors.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.notifyvisitors.notifyvisitors/notifyvisitors/4.1.4/3fc47ac4bfd01561d79e48a3a23e2c371b206e68/notifyvisitors-4.1.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

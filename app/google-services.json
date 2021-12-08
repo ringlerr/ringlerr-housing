@@ -1,0 +1,204 @@
+{
+  "project_info": {
+    "project_number": "254226556734",
+    "firebase_url": "https://callup-93f39.firebaseio.com",
+    "project_id": "callup-93f39",
+    "storage_bucket": "callup-93f39.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:254226556734:android:fc42633d79614948",
+        "android_client_info": {
+          "package_name": "com.luncher.bounjour.callup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "254226556734-4tveaq8v4j749kgk9neq5qi484ar54fu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.luncher.bounjour.callup",
+            "certificate_hash": "7d7047729258e27cf9a12b8a9c78fa5c541dd95c"
+          }
+        },
+        {
+          "client_id": "254226556734-co2554hec6j4qgms0u2sdq32b3ibt1fs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.luncher.bounjour.callup",
+            "certificate_hash": "cd33510dc4e8525d61104eed7a9bb9c8508ac51a"
+          }
+        },
+        {
+          "client_id": "254226556734-mrmojp0hhpjud1ut8ls2588tfv7bquqf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.luncher.bounjour.callup",
+            "certificate_hash": "dcf1afe41bd8ad41e8647196b54a725e91ac1fcd"
+          }
+        },
+        {
+          "client_id": "254226556734-jm7636tpccnegqtmsdf3goh8alsustol.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAofccH1QWyfk5Au5rcRRThny_RAJd_w0I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "254226556734-jm7636tpccnegqtmsdf3goh8alsustol.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:254226556734:android:7eabd4843820f6c986ae6f",
+        "android_client_info": {
+          "package_name": "com.luncher.santanu.ais"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "254226556734-jm7636tpccnegqtmsdf3goh8alsustol.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAofccH1QWyfk5Au5rcRRThny_RAJd_w0I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "254226556734-jm7636tpccnegqtmsdf3goh8alsustol.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:254226556734:android:7dfa556f7ae2d80786ae6f",
+        "android_client_info": {
+          "package_name": "com.luncher.santanu.demoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "254226556734-jafk1gvbnrtf7gue5s5ntvdh4c9k3kmk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.luncher.santanu.demoapp",
+            "certificate_hash": "7d7047729258e27cf9a12b8a9c78fa5c541dd95c"
+          }
+        },
+        {
+          "client_id": "254226556734-n2bbn374j0jbqu0hs63vv97cs6e1rr03.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.luncher.santanu.demoapp",
+            "certificate_hash": "cd33510dc4e8525d61104eed7a9bb9c8508ac51a"
+          }
+        },
+        {
+          "client_id": "254226556734-qrhe8mtjppm9ou408vh5hhoc851mk25v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.luncher.santanu.demoapp",
+            "certificate_hash": "dcf1afe41bd8ad41e8647196b54a725e91ac1fcd"
+          }
+        },
+        {
+          "client_id": "254226556734-jm7636tpccnegqtmsdf3goh8alsustol.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAofccH1QWyfk5Au5rcRRThny_RAJd_w0I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "254226556734-jm7636tpccnegqtmsdf3goh8alsustol.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:254226556734:android:843f421e2ccbeb0286ae6f",
+        "android_client_info": {
+          "package_name": "com.luncher.santanu.gojek"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "254226556734-jm7636tpccnegqtmsdf3goh8alsustol.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAofccH1QWyfk5Au5rcRRThny_RAJd_w0I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "254226556734-jm7636tpccnegqtmsdf3goh8alsustol.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:254226556734:android:ee794bbeb6a960a186ae6f",
+        "android_client_info": {
+          "package_name": "com.luncher.santanu.selfDemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "254226556734-jm7636tpccnegqtmsdf3goh8alsustol.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAofccH1QWyfk5Au5rcRRThny_RAJd_w0I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "254226556734-jm7636tpccnegqtmsdf3goh8alsustol.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
