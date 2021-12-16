@@ -10,8 +10,8 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 1
-        versionName "1.0.2"
+        versionCode 104
+        versionName "1.0.4"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
@@ -55,7 +55,7 @@ afterEvaluate {
 
                 // You can then customize attributes of the publication as shown below.
                 groupId = 'com.ringlerr.callplus'
-                artifactId = 'ringlerr-housing'
+                artifactId = 'callplus'
                 version = android.defaultConfig.versionName
             }
         }
