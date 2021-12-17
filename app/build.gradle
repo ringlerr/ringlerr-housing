@@ -30,7 +30,13 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    implementation project(path: ':ringlerrlibrary')
-    //implementation 'com.github.ringlerr:ringlerr-housing:1.0.0'
+    implementation project(path: ':callplus')
+    //implementation 'com.ringlerr.callplus:callplus:1.0.5'
     implementation 'androidx.cardview:cardview:1.0.0'
+}
+
+task comps {
+    afterEvaluate {
+        println("Components: " + components*.name)
+    }
 }
