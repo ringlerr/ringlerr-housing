@@ -3,8 +3,8 @@ package com.luncher.santanu.ais;
 import java.util.ArrayList;
 
 public class Contact {
-    private String mName;
-    private String mNumber;
+    private final String mName;
+    private final String mNumber;
 
     public Contact(String name, String number) {
         mName = name;
@@ -19,16 +19,16 @@ public class Contact {
         return mNumber;
     }
 
-    private static int lastContactId = 0;
+    private static final int lastContactId = 0;
 
     public static ArrayList<Contact> createContactsList() {
         ArrayList<Contact> contacts = new ArrayList<Contact>();
 
-        contacts.add(new Contact("Nich", "+6281394222888"));
-        contacts.add(new Contact("Mike", "+6281211117425"));
-        contacts.add(new Contact("Vishal", "+919599955675"));
-        contacts.add(new Contact("Jyoti", "+919871860721"));
-        contacts.add(new Contact("Santanu", "+917002019851"));
+        contacts.add(new Contact("a", "+0"));
+        contacts.add(new Contact("b", "+0"));
+        contacts.add(new Contact("c", "+0"));
+        contacts.add(new Contact("d", "+0"));
+        contacts.add(new Contact("e", "+0"));
 
         return contacts;
     }
