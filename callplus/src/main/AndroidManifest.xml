@@ -8,13 +8,6 @@
 
     <application>
         <activity
-            android:name=".InstaActivity"
-            android:allowEmbedded="true"
-            android:documentLaunchMode="always"
-            android:excludeFromRecents="true"
-            android:resizeableActivity="true"
-            android:theme="@style/Theme.Transparent"></activity>
-        <activity
             android:name=".NewDialogActivity"
             android:allowEmbedded="true"
             android:documentLaunchMode="always"
@@ -22,56 +15,7 @@
             android:resizeableActivity="true"
             android:theme="@style/Theme.Transparent" />
         <activity
-            android:name=".CusADialogActivity"
-            android:allowEmbedded="true"
-            android:documentLaunchMode="always"
-            android:excludeFromRecents="true"
-            android:resizeableActivity="true"
-            android:theme="@style/Theme.Transparent" />
-        <activity
-            android:name=".CusBDialogActivity"
-            android:allowEmbedded="true"
-            android:documentLaunchMode="always"
-            android:excludeFromRecents="true"
-            android:resizeableActivity="true"
-            android:theme="@style/Theme.Transparent" />
-        <activity
             android:name=".CallBackDialogActivity"
-            android:allowEmbedded="true"
-            android:documentLaunchMode="always"
-            android:excludeFromRecents="true"
-            android:resizeableActivity="true"
-            android:theme="@style/Theme.Transparent" />
-        <activity
-            android:name=".SlideDialogActivity"
-            android:allowEmbedded="true"
-            android:documentLaunchMode="always"
-            android:excludeFromRecents="true"
-            android:resizeableActivity="true"
-            android:theme="@style/Theme.Transparent" />
-        <activity
-            android:name=".SlideDialogActivityTwo"
-            android:allowEmbedded="true"
-            android:documentLaunchMode="always"
-            android:excludeFromRecents="true"
-            android:resizeableActivity="true"
-            android:theme="@style/Theme.Transparent" />
-        <activity
-            android:name=".SlideDialogActivityThree"
-            android:allowEmbedded="true"
-            android:documentLaunchMode="always"
-            android:excludeFromRecents="true"
-            android:resizeableActivity="true"
-            android:theme="@style/Theme.Transparent" />
-        <activity
-            android:name=".SlideDialogActivityImage"
-            android:allowEmbedded="true"
-            android:documentLaunchMode="always"
-            android:excludeFromRecents="true"
-            android:resizeableActivity="true"
-            android:theme="@style/Theme.Transparent" />
-        <activity
-            android:name=".SlideDialogActivityVideo"
             android:allowEmbedded="true"
             android:documentLaunchMode="always"
             android:excludeFromRecents="true"
@@ -91,20 +35,20 @@
             android:resizeableActivity="true"
             android:theme="@style/Theme.Transparent" />
 
-        <receiver
-            android:name="com.ringlerr.callplus.PhonecallReceiver"
-            android:enabled="true"
-            android:exported="true"></receiver>
+<!--        <receiver-->
+<!--            android:name="com.ringlerr.callplus.PhonecallReceiver"-->
+<!--            android:enabled="true"-->
+<!--            android:exported="true"></receiver>-->
 
-        <!--This part is inside the application-->
-        <receiver android:name="com.ringlerr.callplus.CallReceiver" android:enabled="true">
-            <intent-filter>
-                <action android:name="android.intent.action.PHONE_STATE" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
-            </intent-filter>
-        </receiver>
+<!--        &lt;!&ndash;This part is inside the application&ndash;&gt;-->
+<!--        <receiver android:name="com.ringlerr.callplus.CallReceiver" android:enabled="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.PHONE_STATE" />-->
+<!--            </intent-filter>-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
     </application>
 
 </manifest>

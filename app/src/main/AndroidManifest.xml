@@ -24,14 +24,14 @@
             android:exported="true"></receiver>
 
         <!--This part is inside the application-->
-        <receiver android:name="com.ringlerr.callplus.CallReceiver" android:enabled="true">
-            <intent-filter>
-                <action android:name="android.intent.action.PHONE_STATE" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
-            </intent-filter>
-        </receiver>
+<!--        <receiver android:name="com.ringlerr.callplus.CallReceiver" android:enabled="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.PHONE_STATE" />-->
+<!--            </intent-filter>-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
 
         <service
             android:name="com.luncher.santanu.ais.FirebaseService"
