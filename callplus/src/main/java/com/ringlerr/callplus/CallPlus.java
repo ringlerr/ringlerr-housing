@@ -76,6 +76,7 @@ public class CallPlus {
     public static String type;
     static String recever_name = "";
     static String business_name = "";
+    static String user_image = "";
     static String name;
     static String from;
     static String message_id;
@@ -166,7 +167,7 @@ public class CallPlus {
             final String caller_name = json.getString("caller_name");
             final String recever_name = json.getString("recever_name");
             final String business_name = json.getString("business_name");
-            final String user_image = json.getString("user_image");
+            final String user_image = "";
             final String banner_url = json.getString("banner_url");
 
             String message_id = sendContext(key, from, message, type, banner_url, to, caller_name, recever_name, business_name, user_image, "", "", additional_data, false);
