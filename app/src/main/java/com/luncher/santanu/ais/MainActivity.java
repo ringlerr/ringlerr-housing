@@ -36,6 +36,9 @@ import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 import com.ringlerr.callplus.CallPlus;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -112,6 +115,15 @@ public class MainActivity extends AppCompatActivity {
 
         initComponent();
         initToolbar();
+
+        String data = "{'key':'oioi','phone_from':'7002019851','message_id':'0','recever_name':'Customer','message':'HI, Customer is interested in your property','phone_to':'+917002019851','banner_url':'','cvc':'','type':'call','business_name':'Housing','caller_name':'Housing'}";
+        JSONObject json = null;
+        try {
+            json = new JSONObject(data);
+            CallPlus.showDialog(MainActivity.this, json);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

@@ -144,7 +144,7 @@ public class CallBackDialogActivity extends AppCompatActivity {
         lp.width = WindowManager.LayoutParams.WRAP_CONTENT;
         lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
 
-        LinearLayout main_layout = dialogView.findViewById(R.id.main_layout);
+        LinearLayout drag_layout = dialogView.findViewById(R.id.drag_layout);
 
         final TextView messageView = dialogView.findViewById(R.id.messageView);
         final TextView messageViewRevert = dialogView.findViewById(R.id.messageViewRevert);
@@ -176,7 +176,7 @@ public class CallBackDialogActivity extends AppCompatActivity {
 
         bt_open.setText(from);
 
-        main_layout.setOnTouchListener(new View.OnTouchListener() {
+        drag_layout.setOnTouchListener(new View.OnTouchListener() {
             int orgX, orgY;
 
             @Override

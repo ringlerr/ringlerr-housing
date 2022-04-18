@@ -194,9 +194,9 @@ public class DialogActivity extends AppCompatActivity {
         lp.width = WindowManager.LayoutParams.WRAP_CONTENT;
         lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
 
-        LinearLayout main_layout = dialogView.findViewById(R.id.main_layout);
+        LinearLayout drag_layout = dialogView.findViewById(R.id.drag_layout);
 
-        main_layout.setOnTouchListener(new View.OnTouchListener() {
+        drag_layout.setOnTouchListener(new View.OnTouchListener() {
             int orgX, orgY;
 
             @Override
@@ -580,9 +580,9 @@ public class DialogActivity extends AppCompatActivity {
         dialog.show();
         dialog.getWindow().setAttributes(lp);
 
-        LinearLayout main_layout = dialog.findViewById(R.id.main_layout);
+        LinearLayout drag_layout = dialog.findViewById(R.id.drag_layout);
 
-        main_layout.setOnTouchListener(new View.OnTouchListener() {
+        drag_layout.setOnTouchListener(new View.OnTouchListener() {
             int orgX, orgY;
 
             @Override
