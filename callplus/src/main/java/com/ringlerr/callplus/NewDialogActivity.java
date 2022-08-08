@@ -46,17 +46,17 @@ import javax.net.ssl.HttpsURLConnection;
 public class NewDialogActivity extends AppCompatActivity {
 
     public static int logo = 0, TYPE_CLOSED = 1, TYPE_NOT_INTERESTED = 2, TYPE_SEND_MESSAGE = 3, TYPE_APP_OPEN = 4, TYPE_REVERT = 5,
-            TYPE_CANT_TALK_NOW = 6, TYPE_PROFILE_CLICK = 7, TYPE_MESSAGE_CLICK = 8, TYPE_CALL = 8, TYPE_IMPRESSION = 9, layout_call = 0, layout_text = 0;
+            TYPE_CANT_TALK_NOW = 6, TYPE_WHATSAPP = 7, TYPE_MESSAGE_CLICK = 8, TYPE_CALL = 8, TYPE_IMPRESSION = 9, layout_call = 0, layout_text = 0;
     String from;
     public static String type;
     static Dialog dialog;
     String recever_name = "";
     String business_name = "";
     String name;
-    String message_id;
+    public static String message_id;
     String m_phone;
     AlertDialog alert;
-    public static String key = "12a4f62af7991d51ba9bef728e260cd5e5ddacb2b3a60fa33b7cc526f26edb";
+    public static String key = "063c14fc631205f45d8dfa4982d08b568d78db4bcaeba0c55db087f2d29b6615";
     public static boolean hideOnRevert = false;
     static View dialogView;
     AlertDialog alertList;
@@ -108,7 +108,9 @@ public class NewDialogActivity extends AppCompatActivity {
         message_id = intent.getExtras().getString("message_id");
         final String urlImage = intent.getExtras().getString("user_image");
         final String cvc = intent.getExtras().getString("cvc");
-        callBack(from);
+        if(null != message_id) {
+            callBack(from);
+        }
 
         AlertDialog.Builder builder = new AlertDialog.Builder(NewDialogActivity.this);
         LayoutInflater inflater = LayoutInflater.from(NewDialogActivity.this);
@@ -180,7 +182,7 @@ public class NewDialogActivity extends AppCompatActivity {
                 switch (motionEvent.getActionMasked()) {
                     case MotionEvent.ACTION_MOVE:
                         Log.v("Motion", "rawY : "+(int) motionEvent.getRawY());
-                        int startX = (int) motionEvent.getRawY() - (orgY+320);
+                        int startX = (int) motionEvent.getRawY() - (orgY+660);
                         lp.y = startX;
                         lp.x = (int) motionEvent.getRawX() - (orgX+15);
                         window.setAttributes(lp);
@@ -224,6 +226,7 @@ public class NewDialogActivity extends AppCompatActivity {
 //                i.setData(Uri.parse(url));
 //                startActivity(i);
 
+                clickRegester(from, TYPE_WHATSAPP);
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
                 sendIntent.putExtra(Intent.EXTRA_TEXT, ".");
@@ -331,7 +334,9 @@ public class NewDialogActivity extends AppCompatActivity {
         business_name = intent.getExtras().getString("business_name");
         message_id = intent.getExtras().getString("message_id");
         final String urlImage = intent.getExtras().getString("user_image");
-        callBack(from);
+        if(null != message_id) {
+            callBack(from);
+        }
 
         dialog = new Dialog(this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); // before
@@ -371,6 +376,7 @@ public class NewDialogActivity extends AppCompatActivity {
         whatsapp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                clickRegester(from, TYPE_WHATSAPP);
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
                 sendIntent.putExtra(Intent.EXTRA_TEXT, ".");

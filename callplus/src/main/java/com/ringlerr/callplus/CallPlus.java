@@ -71,6 +71,7 @@ public class CallPlus {
     public static String package_name = "com.indiamart.m";
     public static String class_name = "MainActivity.class";
     public static String cant_talk_now_text = "Can't talk right now";
+    static Context mycontext;
 
     static String m_phone;
     public static String type;
@@ -154,7 +155,7 @@ public class CallPlus {
     }
 
     private static void handleDataMessage(final Context context, JSONObject json) {
-
+        mycontext = context;
         try {
             Long tsLong = System.currentTimeMillis()/1000;
 
@@ -170,7 +171,7 @@ public class CallPlus {
             final String user_image = "";
             final String banner_url = json.getString("banner_url");
 
-            String message_id = sendContext(key, from, message, type, banner_url, to, caller_name, recever_name, business_name, user_image, "", "", additional_data, false);
+            sendContext(key, from, message, type, banner_url, to, caller_name, recever_name, business_name, user_image, "", "", additional_data, false);
 
             //message_id = json.getString("message_id");
             final String product_name = "";
@@ -181,7 +182,7 @@ public class CallPlus {
 
             Intent dialogIntent = null;
 
-            message_id_pull = message_id;
+            //message_id_pull = message_id;
 
             if(type.equals("callback") || type.equals("reply")){
                 dialogIntent = new Intent(context, CallBackDialogActivity.class);
@@ -229,13 +230,13 @@ public class CallPlus {
                 }
             }
 
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
-                //handlefullScreenNotification(context, from, message, type, message_id, to, caller_name, recever_name, business_name, user_image, banner_url, product_name, cvc);
-                handleNotification(context, from, message, type, message_id, to, caller_name, recever_name, business_name, user_image, banner_url, product_name, cvc, product, platform, page);
-                //drawApp(context, dialogIntent);
-            }else{
-                handleNotification(context, from, message, type, message_id, to, caller_name, recever_name, business_name, user_image, banner_url, product_name, cvc, product, platform, page);
-            }
+//            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
+//                //handlefullScreenNotification(context, from, message, type, message_id, to, caller_name, recever_name, business_name, user_image, banner_url, product_name, cvc);
+//                handleNotification(context, from, message, type, message_id_pull, to, caller_name, recever_name, business_name, user_image, banner_url, product_name, cvc, product, platform, page);
+//                //drawApp(context, dialogIntent);
+//            }else{
+//                handleNotification(context, from, message, type, message_id_pull, to, caller_name, recever_name, business_name, user_image, banner_url, product_name, cvc, product, platform, page);
+//            }
 
         } catch (JSONException e) {
             Log.e(TAG, "Json Exception: " + e.getMessage());
@@ -435,9 +436,8 @@ public class CallPlus {
         }
 
         if(type.equals("call") || type.equals("video") || type.equals("image") || type.equals("payment")){
-            notificationBuilder.setContentTitle(from + "("+caller_name+") is calling you")
-                    .addAction(com.ringlerr.callplus.R.drawable.ic_message_black_24dp, "Call Back", callBackIntent)
-                    .addAction(com.ringlerr.callplus.R.drawable.ic_message_black_24dp, "Not Interested", actionIntent);
+            notificationBuilder.setContentTitle(from + "("+caller_name+") is calling you");
+                    //.addAction(com.ringlerr.callplus.R.drawable.ic_message_black_24dp, "Call Back", callBackIntent);
 
         }else if(type.equals("slide")){
             notificationBuilder.setContentTitle("Call from "+from + "("+caller_name+")")
@@ -629,8 +629,6 @@ public class CallPlus {
 
     public static String sendContext(final String key, final String phone_number, final String message, final String type, final String image_url, final String phone_from, final String caller_name, final String recever_name, final String business_name, final String user_image, final String serverToken, final String product_name, final String additional_data, boolean send_cvc){
 
-        final String[] message_id_pull = {""};
-
         new AsyncTask<String, Integer, String>(){
 
             @Override
@@ -705,7 +703,9 @@ public class CallPlus {
                         String resMessgae = connection.getResponseMessage();
                         BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
                         String output = br.readLine();
-                        message_id_pull[0] = output;
+                        message_id_pull = output;
+                        NewDialogActivity.message_id = output;
+                        handleNotification(mycontext, phone_number, message, type, message_id_pull, phone_from, caller_name, recever_name, business_name, user_image, "", product_name, "", product_name, "", "");
                     }
                 }catch (IOException e) {
                     //e.printStackTrace();
@@ -717,7 +717,7 @@ public class CallPlus {
                     if(connection != null) // Make sure the connection is not null.
                         connection.disconnect();
                 }
-                return message_id_pull[0];
+                return message_id_pull;
             }
 
             protected void onPostExecute(String result) {
@@ -730,7 +730,7 @@ public class CallPlus {
 
         }.execute();
 
-        return message_id_pull[0];
+        return message_id_pull;
     }
 
     // Function to generate random alpha-numeric password of specific length
@@ -1053,7 +1053,7 @@ public class CallPlus {
                             + "=" + URLEncoder.encode(m_phone, "UTF-8");
 
                     data += "&" + URLEncoder.encode("key", "UTF-8")
-                            + "=" + URLEncoder.encode(DialogActivity.key, "UTF-8");
+                            + "=" + URLEncoder.encode(NewDialogActivity.key, "UTF-8");
 
                     data += "&" + URLEncoder.encode("message_id", "UTF-8")
                             + "=" + URLEncoder.encode(message_id, "UTF-8");
@@ -1202,7 +1202,7 @@ public class CallPlus {
                             + "=" + URLEncoder.encode(m_phone, "UTF-8");
 
                     data += "&" + URLEncoder.encode("key", "UTF-8")
-                            + "=" + URLEncoder.encode(DialogActivity.key, "UTF-8");
+                            + "=" + URLEncoder.encode(NewDialogActivity.key, "UTF-8");
 
                     data += "&" + URLEncoder.encode("type", "UTF-8")
                             + "=" + URLEncoder.encode(type+"", "UTF-8");
